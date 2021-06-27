@@ -1,0 +1,48 @@
+.container {
+  width: 500px;
+  height: 550px;
+  background-color: rgb(186, 248, 248);
+  margin: 0 auto;
+  /* padding-top: 20px; */
+}
+
+.allBox {
+  width: 450px;
+  height: 30%;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 10px;
+  /* background-color: aqua; */
+  margin: 0 auto;
+}
+
+.box {
+  height: 30px;
+  width: 60px;
+  background-color: red;
+}
+
+.paddleDiv {
+  height: 63%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.paddle {
+  height: 20px;
+  width: 70px;
+  background-color: blueviolet;
+  position: relative;
+  left: 5px;
+}
+
+.ball {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: chocolate;
+}
