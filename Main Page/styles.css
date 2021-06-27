@@ -1,0 +1,26 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("img.jpg");
+}
+h1 {
+  color: chartreuse;
+  box-shadow: 0 0 10px chartreuse, 0 0 40px chartreuse, 0 0 80px chartreuse;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 2vw;
+  position: absolute;
+  top: 5px;
+  right: 45%;
+}
+#canvas1 {
+  border: 5px solid white;
+  display: block;
+  margin: 0 auto;
+}
