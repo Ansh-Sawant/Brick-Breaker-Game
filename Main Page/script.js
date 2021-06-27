@@ -1,4 +1,4 @@
-let paddlePos = ;
+let paddlePos = 0;
 let leftArrow = false;
 let rightArrow = false;
 
