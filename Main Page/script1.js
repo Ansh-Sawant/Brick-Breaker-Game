@@ -5,9 +5,9 @@ var x = canvas.width / 2;
 var y = canvas.height - 30;
 var dx = 2;
 var dy = -2;
-var ballRadius = 7;
+var ballRadius = 10;
 var paddleHeight = 15;
-var paddleWidth = 75;
+var paddleWidth = 100;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
@@ -54,7 +54,7 @@ function drawBricks() {
 
         box.beginPath();
         box.rect(brickX, brickY, brickWidth, brickHeight);
-        box.fillStyle = "green";
+        box.fillStyle = "pink";
         box.fill();
         box.strokeStyle = "white";
         box.stroke();
@@ -90,7 +90,7 @@ function drawBall() {
 function drawPaddle() {
   box.beginPath();
   box.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  box.fillStyle = "#0095DD";
+  box.fillStyle = "black";
   box.fill();
   box.closePath();
 }
