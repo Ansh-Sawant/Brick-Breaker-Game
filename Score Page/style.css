@@ -1,19 +1,19 @@
-@-webkit-keyframes animacao1 { 0% {background: #D62623;}
-							   50% {background: #FE3430;}
-							   100% {background: #FB3733;} }
+@-webkit-keyframes animacao1 { 0% {background: rgba(10, 9, 9, 0.815);}
+							   50% {background: #0a0909f1;}
+							   100% {background: #080606;} }
 
-@-moz-keyframes animacao1 { 0% {background: #D62623;}
-							50% {background: #EE3430;}
-							100% {background: #FB3733;} }
+@-moz-keyframes animacao1 { 0% {background: rgba(10, 9, 9, 0.815);}
+							50% {background: #0d0d18;}
+							100% {background: #080608;} }
 
-@keyframes animacao1 { 0% {background: #D62623;}
-							   50% {background: #EE3430;}
-							   100% {background: #FB3733;} }
+@keyframes animacao1 { 0% {background: rgba(10,9,9,0.815);}
+							   50% {background: #0d0d18;}
+							   100% {background: #080606;} }
 
 body {background: #B0E0E6;}
 
-#tudo {width: 300px;
-		height: 330px;
+#tudo {width: 400px;
+		height: 500px;
 		margin: auto;
     	border-radius: 15px;
     	-webkit-animation-name: animacao1;
@@ -35,12 +35,13 @@ body {background: #B0E0E6;}
 		animation-direction: alternate;}
 
 
-.gameover {width:300px;
-			height: 100px;
-			padding-top: 30px;
-			margin-top: 150px;
-			padding-bottom: 20px;
-			background-color:red;
+.gameover {width:400px;
+			height: 150px;
+			padding-top: 50px;
+			margin-top: 70px;
+			padding-bottom: 15px;
+			
+			
 			border-radius: 15px;;
 		}
 
@@ -54,14 +55,16 @@ body {background: #B0E0E6;}
 			color: #ffffff;}
 
 .continue	{width: 300px;
-			height: 55px;
-			padding-top: 30px;
+			height: 100px;
+			padding-top: 75px;
+			padding-bottom: 10px;
+			padding-left: 50px;
 		}
 
 .continue p {margin-top: 0px;
 			margin-bottom: 0px;
 			text-align: center;
-			font-size: 25px;
+			font-size: 30px;
 			font-weight: bold;
 			font-family: corbel;
 			color: #ffffff;
@@ -84,8 +87,9 @@ body {background: #B0E0E6;}
     border: 1px solid #000000;
 		border-radius: 15px;
 		background: #006400;
-		margin-right: 30px;
-		margin-left: 20px;
+		margin-right: 80px;
+		margin-left: 0px;
+		margin-bottom: 10px;
 		float: left;}
 
 
@@ -129,7 +133,8 @@ body {background: #B0E0E6;}
 	text-shadow: 1.5px 1.5px #FB3733;
 	padding: 20px 30px 20px 30px;
 	border-radius: 15px;
-	background: #000000;
+	background: red;
+	border: #000000;
 	
 	float: left;}
 
