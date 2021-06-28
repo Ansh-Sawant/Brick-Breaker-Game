@@ -68,17 +68,17 @@ function drawBricks() {
 }
 
 function keydown(e) {
-  if (e.keyCode == 39) {
+  if (e.key == "ArrowLeft") {
     rightPressed = true;
-  } else if (e.keyCode == 37) {
+  } else if (e.key == "ArrowRight") {
     leftPressed = true;
   }
 }
 
 function keyup(e) {
-  if (e.keyCode == 39) {
+  if (e.key == "ArrowLeft") {
     rightPressed = false;
-  } else if (e.keyCode == 37) {
+  } else if (e.key == "ArrowRight") {
     leftPressed = false;
   }
 }
@@ -191,4 +191,4 @@ document.getElementById("playAgainNo").addEventListener("click", () => {
   location.href = "../First Page/firstPage.html";
 });
 
-setInterval(draw, 10);
+setInterval(draw, 7);
