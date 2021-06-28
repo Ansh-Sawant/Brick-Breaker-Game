@@ -21,6 +21,9 @@ var brickOffSetLeft = 30;
 var score = 0;
 var lives = 3;
 
+const scoreScreen = document.getElementById("tudo");
+const scr = document.getElementById("scr");
+
 var bricks = [];
 for (let c = 0; c < brickCCount; c++) {
   bricks[c] = [];
@@ -63,6 +66,7 @@ function drawBricks() {
     }
   }
 }
+
 function keydown(e) {
   if (e.keyCode == 39) {
     rightPressed = true;
@@ -109,8 +113,11 @@ function collisonDetection() {
           b.status = 0;
           ++score;
           if (brickCCount * brickRCount == score) {
-            alert("YOU WIN");
-            document.location.reload();
+            // alert("YOU WIN");
+            document.getElementById("res1").innerHTML = "YOU";
+            document.getElementById("res2").innerHTML = "WIN";
+            scoreScreen.style.display = "block";
+            scr.innerHTML = score;
           }
         }
       }
@@ -146,8 +153,9 @@ function draw() {
     } else {
       lives = lives - 1;
       if (!lives) {
-        alert("GAME OVER");
-        document.location.reload();
+        // alert("GAME OVER");
+        scoreScreen.style.display = "block";
+        scr.innerHTML = score;
       } else {
         x = canvas.width / 2;
         y = canvas.height - 30;
@@ -166,8 +174,21 @@ function draw() {
   } else if (leftPressed && paddleX > 0) {
     paddleX -= 7;
   }
-  x += dx;
-  y += dy;
+  if (!lives || brickCCount * brickRCount == score) {
+    x = 0;
+    y = 0;
+  } else {
+    x += dx;
+    y += dy;
+  }
 }
+
+document.getElementById("playAgainYes").addEventListener("click", () => {
+  location.reload();
+});
+
+document.getElementById("playAgainNo").addEventListener("click", () => {
+  location.href = "../First Page/firstPage.html";
+});
 
 setInterval(draw, 10);
