@@ -115,7 +115,7 @@ function collisonDetection() {
           var audio1 = new Audio("../a_sound/Blocks.mp3");
           audio1.play();
           if (brickCCount * brickRCount == score) {
-            // alert("YOU WIN");
+            // WIN
             document.getElementById("res1").innerHTML = "YOU";
             document.getElementById("res2").innerHTML = "WIN";
             scoreScreen.style.display = "block";
