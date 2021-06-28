@@ -24,7 +24,6 @@
     <div class="container">
       <button class="audioPlay">
         <i class="fas fa-volume-mute"></i>
-        <!-- <i class="fas fa-volume-up"></i> -->
       </button>
       <div class="heading">SPACE MISSION</div>
       <div class="ultimate">The Ultimate Challenge</div>
@@ -44,6 +43,7 @@
     <div class="team">By-Team TITANS</div>
     <script>
       var audio = new Audio("../a_sound/Music.mp3");
+      // var audio2 = new Audio("../a_sound/Startsound.mp3");
       let playing = false;
       document.querySelector(".audioPlay").addEventListener("click", () => {
         if (playing) {
@@ -58,6 +58,9 @@
           document.querySelector("i").classList.add("fa-volume-up");
         }
       });
+      // document.getElementById("startbtn").addEventListener("click", () => {
+      //   audio2.play();
+      // });
     </script>
   </body>
 </html>

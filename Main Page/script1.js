@@ -112,6 +112,8 @@ function collisonDetection() {
           dy = -dy;
           b.status = 0;
           ++score;
+          var audio1 = new Audio("../a_sound/Blocks.mp3");
+          audio1.play();
           if (brickCCount * brickRCount == score) {
             // alert("YOU WIN");
             document.getElementById("res1").innerHTML = "YOU";
@@ -150,6 +152,8 @@ function draw() {
   } else if (y + dy > canvas.height - 2 * ballRadius) {
     if (x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
+      var audio3 = new Audio("../a_sound/Paddlesound.mp3");
+      audio3.play();
     } else {
       lives = lives - 1;
       if (!lives) {
@@ -168,6 +172,10 @@ function draw() {
 
   if (x + dx < ballRadius || x + dx > canvas.width - ballRadius) {
     dx = -dx;
+    if (lives) {
+      var audio2 = new Audio("../a_sound/Wall.mp3");
+      audio2.play();
+    }
   }
   if (rightPressed && paddleX < canvas.width - paddleWidth) {
     paddleX += 7;
