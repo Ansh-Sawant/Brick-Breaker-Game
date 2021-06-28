@@ -11,7 +11,7 @@ var paddleWidth = 100;
 var paddleX = (canvas.width - paddleWidth) / 2;
 var rightPressed = false;
 var leftPressed = false;
-var brickRCount = 6;
+var brickRCount = 1;
 var brickCCount = 8;
 var brickWidth = 75;
 var brickHeight = 20;
@@ -157,7 +157,7 @@ function draw() {
     } else {
       lives = lives - 1;
       if (!lives) {
-        // alert("GAME OVER");
+        // "GAME OVER"
         scoreScreen.style.display = "block";
         scr.innerHTML = score;
       } else {
@@ -172,7 +172,7 @@ function draw() {
 
   if (x + dx < ballRadius || x + dx > canvas.width - ballRadius) {
     dx = -dx;
-    if (lives) {
+    if (lives && brickCCount * brickRCount != score) {
       var audio2 = new Audio("../a_sound/Wall.mp3");
       audio2.play();
     }
