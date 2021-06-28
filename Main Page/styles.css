@@ -182,3 +182,7 @@ h1 {
   animation-iteration-count: infinite;
   animation-direction: alternate;
 }
+
+canvas:hover{
+  cursor: pointer;
+}
